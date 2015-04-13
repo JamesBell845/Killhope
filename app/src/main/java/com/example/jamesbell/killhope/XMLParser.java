@@ -61,58 +61,58 @@ public class XMLParser {
                     break;
                 case XmlPullParser.START_TAG:
                     name = parser.getName();
-                    if (name == "mineral") {
+                    if (name.equals("mineral")) {
                         currentMineral = new MineralObject();
                     } else if (currentMineral != null) {
-                        if (name == "name") {
+                        if (name.equals("name")) {
                             currentMineral.setName(parser.nextText());
-                        } else if (name == "formula") {
+                        } else if (name.equals("formula")) {
                             currentMineral.setForumla(parser.nextText());
-                        } else if (name == "colour") {
+                        } else if (name.equals("colour")) {
                             currentMineral.setColour(parser.nextText());
-                        } else if (name == "abundance"){
+                        } else if (name.equals("abundance")){
                             currentMineral.setAbundance(parser.nextText());
-                        } else if (name == "hardness") {
+                        } else if (name.equals("hardness")) {
                             currentMineral.setHardness(parser.nextText());
-                        } else if (name == "lustre") {
+                        } else if (name.equals("lustre")) {
                             currentMineral.setLustre(parser.nextText());
-                        } else if (name == "ore") {
+                        } else if (name.equals("ore")) {
                             currentMineral.setOre(parser.nextText());
-                        } else if (name == "interestingFact") {
+                        } else if (name.equals("interestingFact")) {
                             currentMineral.setInterestingFact(parser.nextText());
-                        } else if (name == "uses") {
+                        } else if (name.equals("uses")) {
                             currentMineral.setUses(parser.nextText());
-                        } else if (name == "mainCountries") {
+                        } else if (name.equals("mainCountries")) {
                             currentMineral.setMainCountries(parser.nextText());
-                        } else if (name == "crystalHabit") {
+                        } else if (name.equals("crystalHabit")) {
                             currentMineral.setCrystalHabit(parser.nextText());
-                        } else if (name == "crystalStructure") {
+                        } else if (name.equals("crystalStructure")) {
                             currentMineral.setCrystalStructure(parser.nextText());
-                        } else if (name == "depositionalEnviro") {
+                        } else if (name.equals("depositionalEnviro")) {
                             currentMineral.setDepositionalEnviro(parser.nextText());
-                        } else if (name == "transparency") {
+                        } else if (name.equals("transparency")) {
                             currentMineral.setTransparency(parser.nextText());
-                        } else if (name == "originOfName") {
+                        } else if (name.equals("originOfName")) {
                             currentMineral.setOriginOfName(parser.nextText());
-                        } else if (name == "coloursAtKillhope") {
+                        } else if (name.equals("coloursAtKillhope")) {
                             currentMineral.setColoursAtKillhope(parser.nextText());
-                        } else if (name == "furtherUses") {
+                        } else if (name.equals("furtherUses")) {
                             currentMineral.setFurtherUses(parser.nextText());
-                        } else if (name == "streak") {
+                        } else if (name.equals("streak")) {
                             currentMineral.setStreak(parser.nextText());
-                        } else if (name == "cleavage") {
+                        } else if (name.equals("cleavage")) {
                             currentMineral.setCleavage(parser.nextText());
-                        } else if (name == "fracture") {
+                        } else if (name.equals("fracture")) {
                             currentMineral.setFracture(parser.nextText());
-                        } else if (name == "specificGravity") {
+                        } else if (name.equals("specificGravity")) {
                             currentMineral.setSpecificGravity(parser.nextText());
-                        } else if (name == "furtherProperties") {
+                        } else if (name.equals("furtherProperties")) {
                             currentMineral.setFurtherProperties(parser.nextText());
-                        } else if (name == "relevanceAtKillhope") {
+                        } else if (name.equals("relevanceAtKillhope")) {
                             currentMineral.setRelevanceAtKillhope(parser.nextText());
-                        } else if (name == "opticalProperties"){
+                        } else if (name.equals("opticalProperties")){
                             currentMineral.setOpticalProperties(parser.nextText());
-                        } else if (name == "impurities") {
+                        } else if (name.equals("impurities")) {
                             currentMineral.setImpurities(parser.nextText());
                         }
 

@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -45,20 +46,20 @@ public class MainActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        InputStream stream = null;
-//        try {
-//            stream = getApplicationContext().getAssets().open("mineralDatabase.xml");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        //XMLParser parser = new XMLParser(stream);
-        //ArrayList<MineralObject> minerals = parser.getMinerals();
-        //names = new ArrayList<String>();
-        //for(MineralObject mo: minerals){
-        //    names.add(mo.getName());
-        //}
+        InputStream stream = null;
+        try {
+            stream = getApplicationContext().getAssets().open("mineralDatabase.xml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        XMLParser parser = new XMLParser(stream);
+        ArrayList<MineralObject> minerals = parser.getMinerals();
+        names = new ArrayList<String>();
+        for(MineralObject mo: minerals){
+            names.add(mo.getName());
+        }
         ListView drawerList = (ListView) findViewById(R.id.drawerList);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,rocks);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,names);
         drawerList.setAdapter(arrayAdapter);
 
 
@@ -82,7 +83,7 @@ public class MainActivity extends ActionBarActivity
     }
 
     public void onSectionAttached(int number) {
-        mTitle = rocks[number];
+        mTitle = names.get(number-1);
     }
 
     public void restoreActionBar() {
