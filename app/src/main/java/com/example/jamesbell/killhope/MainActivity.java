@@ -96,8 +96,13 @@ public class MainActivity extends ActionBarActivity
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-        actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setTitle(mTitle);
+        actionBar.setDisplayShowTitleEnabled(false);
+        //actionBar.setTitle(mTitle);
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayShowCustomEnabled(true);
+        final ViewGroup customHeader = (ViewGroup) getLayoutInflater().inflate(R.layout.customer_header,null);
+        actionBar.setCustomView(customHeader);
+
     }
 
 
@@ -180,22 +185,22 @@ public class MainActivity extends ActionBarActivity
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
-            //super.onCreate(savedInstanceState);
-            mineralFormula = (TextView) getActivity().findViewById(R.id.mineralFormula);
-            mineralColour = (TextView) getActivity().findViewById(R.id.mineralColour);
-            mineralAbundance = (TextView) getActivity().findViewById(R.id.mineralAbundance);
-            mineralHardness = (TextView) getActivity().findViewById(R.id.mineralHardness);
-            mineralLustre = (TextView) getActivity().findViewById(R.id.mineralLustre);
-            mineralOre = (TextView) getActivity().findViewById(R.id.mineralOre);
-            mineralFunFact = (TextView) getActivity().findViewById(R.id.mineralFunFact);
-
-            mineralFormula.setText(minerals.get(number-1).getForumla());
-            mineralColour.setText(minerals.get(number-1).getColour());
-            mineralAbundance.setText(minerals.get(number-1).getAbundance());
-            mineralHardness.setText(minerals.get(number-1).getHardness());
-            mineralLustre.setText(minerals.get(number-1).getLustre());
-            mineralOre.setText(minerals.get(number-1).getOre());
-            mineralFunFact.setText(minerals.get(number-1).getInterestingFact());
+              super.onCreate(savedInstanceState);
+//            mineralFormula = (TextView) getActivity().findViewById(R.id.mineralFormula);
+//            mineralColour = (TextView) getActivity().findViewById(R.id.mineralColour);
+//            mineralAbundance = (TextView) getActivity().findViewById(R.id.mineralAbundance);
+//            mineralHardness = (TextView) getActivity().findViewById(R.id.mineralHardness);
+//            mineralLustre = (TextView) getActivity().findViewById(R.id.mineralLustre);
+//            mineralOre = (TextView) getActivity().findViewById(R.id.mineralOre);
+//            mineralFunFact = (TextView) getActivity().findViewById(R.id.mineralFunFact);
+//
+//            mineralFormula.setText(minerals.get(number-1).getForumla());
+//            mineralColour.setText(minerals.get(number-1).getColour());
+//            mineralAbundance.setText(minerals.get(number-1).getAbundance());
+//            mineralHardness.setText(minerals.get(number-1).getHardness());
+//            mineralLustre.setText(minerals.get(number-1).getLustre());
+//            mineralOre.setText(minerals.get(number-1).getOre());
+//            mineralFunFact.setText(minerals.get(number-1).getInterestingFact());
         }
     }
 
