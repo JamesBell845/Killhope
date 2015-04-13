@@ -38,7 +38,6 @@ public class MainActivity extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-    private String[] rocks = {"Cobalt","Chalk","Granite","Lead"};
     private ArrayList<String> names;
 
     @Override
