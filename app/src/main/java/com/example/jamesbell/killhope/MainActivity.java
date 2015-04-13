@@ -39,6 +39,11 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
     private ArrayList<String> names;
+    private ArrayList<MineralObject> minerals;
+
+    //Data
+
+    private TextView mineralFormula, mineralColour, mineralAbundance, mineralHardness, mineralLustre, mineralOre, mineralFunFact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,11 +57,20 @@ public class MainActivity extends ActionBarActivity
             e.printStackTrace();
         }
         XMLParser parser = new XMLParser(stream);
-        ArrayList<MineralObject> minerals = parser.getMinerals();
+        minerals = parser.getMinerals();
         names = new ArrayList<String>();
         for(MineralObject mo: minerals){
             names.add(mo.getName());
         }
+
+        mineralFormula = (TextView) findViewById(R.id.mineralFormula);
+        mineralColour = (TextView) findViewById(R.id.mineralColour);
+        mineralAbundance = (TextView) findViewById(R.id.mineralAbundance);
+        mineralHardness = (TextView) findViewById(R.id.mineralHardness);
+        mineralLustre = (TextView) findViewById(R.id.mineralLustre);
+        mineralOre = (TextView) findViewById(R.id.mineralOre);
+        mineralFunFact = (TextView) findViewById(R.id.mineralFunFact);
+
         ListView drawerList = (ListView) findViewById(R.id.drawerList);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,names);
         drawerList.setAdapter(arrayAdapter);
@@ -83,6 +97,14 @@ public class MainActivity extends ActionBarActivity
 
     public void onSectionAttached(int number) {
         mTitle = names.get(number-1);
+
+        mineralFormula.setText(minerals.get(number-1).getForumla());
+        mineralColour.setText(minerals.get(number-1).getColour());
+        mineralAbundance.setText(minerals.get(number-1).getAbundance());
+        mineralHardness.setText(minerals.get(number-1).getHardness());
+        mineralLustre.setText(minerals.get(number-1).getLustre());
+        mineralOre.setText(minerals.get(number-1).getOre());
+        mineralFunFact.setText(minerals.get(number-1).getInterestingFact());
     }
 
     public void restoreActionBar() {
