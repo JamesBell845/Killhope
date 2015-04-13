@@ -1,6 +1,7 @@
 package com.example.jamesbell.killhope;
 
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -49,6 +51,7 @@ public class MainActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         InputStream stream = null;
         try {
@@ -144,7 +147,7 @@ public class MainActivity extends ActionBarActivity
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
 
-        private TextView mineralFormula, mineralColour, mineralAbundance, mineralHardness, mineralLustre, mineralOre, mineralFunFact;
+        private TextView mineralName, mineralFormula, mineralColour, mineralAbundance, mineralHardness, mineralLustre, mineralOre, mineralFunFact;
         private static int number;
 
         /**
@@ -170,6 +173,8 @@ public class MainActivity extends ActionBarActivity
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+
+            mineralName = (TextView) rootView.findViewById(R.id.mineralName);
             mineralFormula = (TextView) rootView.findViewById(R.id.mineralFormula);
             mineralColour = (TextView) rootView.findViewById(R.id.mineralColour);
             mineralAbundance = (TextView) rootView.findViewById(R.id.mineralAbundance);
@@ -178,6 +183,7 @@ public class MainActivity extends ActionBarActivity
             mineralOre = (TextView) rootView.findViewById(R.id.mineralOre);
             mineralFunFact = (TextView) rootView.findViewById(R.id.mineralFunFact);
 
+            mineralName.setText(minerals.get(number-1).getName());
             mineralFormula.setText(minerals.get(number-1).getForumla());
             mineralFormula.setText(minerals.get(number-1).getForumla());
             mineralColour.setText(minerals.get(number-1).getColour());
@@ -200,21 +206,6 @@ public class MainActivity extends ActionBarActivity
         @Override
         public void onCreate(Bundle savedInstanceState) {
               super.onCreate(savedInstanceState);
-//            mineralFormula = (TextView) getActivity().findViewById(R.id.mineralFormula);
-//            mineralColour = (TextView) getActivity().findViewById(R.id.mineralColour);
-//            mineralAbundance = (TextView) getActivity().findViewById(R.id.mineralAbundance);
-//            mineralHardness = (TextView) getActivity().findViewById(R.id.mineralHardness);
-//            mineralLustre = (TextView) getActivity().findViewById(R.id.mineralLustre);
-//            mineralOre = (TextView) getActivity().findViewById(R.id.mineralOre);
-//            mineralFunFact = (TextView) getActivity().findViewById(R.id.mineralFunFact);
-//
-//            mineralFormula.setText(minerals.get(number-1).getForumla());
-//            mineralColour.setText(minerals.get(number-1).getColour());
-//            mineralAbundance.setText(minerals.get(number-1).getAbundance());
-//            mineralHardness.setText(minerals.get(number-1).getHardness());
-//            mineralLustre.setText(minerals.get(number-1).getLustre());
-//            mineralOre.setText(minerals.get(number-1).getOre());
-//            mineralFunFact.setText(minerals.get(number-1).getInterestingFact());
         }
     }
 
