@@ -72,12 +72,13 @@ public class MainActivity extends ActionBarActivity
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
-        mTitle = getTitle();
+
 
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+        mTitle = getTitle();
     }
 
     @Override
@@ -101,7 +102,10 @@ public class MainActivity extends ActionBarActivity
         actionBar.setDisplayShowHomeEnabled(false);
         actionBar.setDisplayShowCustomEnabled(true);
         final ViewGroup customHeader = (ViewGroup) getLayoutInflater().inflate(R.layout.customer_header,null);
+        TextView mineralName = (TextView) customHeader.findViewById(R.id.mineralName);
+        mineralName.setText(mTitle);
         actionBar.setCustomView(customHeader);
+
 
     }
 
