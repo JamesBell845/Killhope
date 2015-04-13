@@ -39,7 +39,7 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
     private ArrayList<String> names;
-    private ArrayList<MineralObject> minerals;
+    public static ArrayList<MineralObject> minerals;
 
     //Data
 
@@ -85,7 +85,7 @@ public class MainActivity extends ActionBarActivity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1,minerals))
+                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                 .commit();
     }
 
@@ -145,19 +145,17 @@ public class MainActivity extends ActionBarActivity
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         private TextView mineralFormula, mineralColour, mineralAbundance, mineralHardness, mineralLustre, mineralOre, mineralFunFact;
-        private static ArrayList<MineralObject> minerals;
         private static int number;
 
         /**
          * Returns a new instance of this fragment for the given section
          * number.
          */
-        public static PlaceholderFragment newInstance(int sectionNumber, ArrayList<MineralObject> min) {
+        public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
-            minerals = min;
             number = sectionNumber;
 
             return fragment;
@@ -172,6 +170,22 @@ public class MainActivity extends ActionBarActivity
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            mineralFormula = (TextView) rootView.findViewById(R.id.mineralFormula);
+            mineralColour = (TextView) rootView.findViewById(R.id.mineralColour);
+            mineralAbundance = (TextView) rootView.findViewById(R.id.mineralAbundance);
+            mineralHardness = (TextView) rootView.findViewById(R.id.mineralHardness);
+            mineralLustre = (TextView) rootView.findViewById(R.id.mineralLustre);
+            mineralOre = (TextView) rootView.findViewById(R.id.mineralOre);
+            mineralFunFact = (TextView) rootView.findViewById(R.id.mineralFunFact);
+
+            mineralFormula.setText(minerals.get(number-1).getForumla());
+            mineralFormula.setText(minerals.get(number-1).getForumla());
+            mineralColour.setText(minerals.get(number-1).getColour());
+            mineralAbundance.setText(minerals.get(number-1).getAbundance());
+            mineralHardness.setText(minerals.get(number-1).getHardness());
+            mineralLustre.setText(minerals.get(number-1).getLustre());
+            mineralOre.setText(minerals.get(number-1).getOre());
+            mineralFunFact.setText(minerals.get(number-1).getInterestingFact());
 
             return rootView;
         }
