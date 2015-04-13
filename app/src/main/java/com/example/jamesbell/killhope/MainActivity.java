@@ -39,7 +39,7 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
     private ArrayList<String> names;
-    private ArrayList<MineralObject> minerals;
+    public static ArrayList<MineralObject> minerals;
 
     //Data
 
@@ -62,6 +62,7 @@ public class MainActivity extends ActionBarActivity
         for(MineralObject mo: minerals){
             names.add(mo.getName());
         }
+
 
 
 
@@ -138,9 +139,8 @@ public class MainActivity extends ActionBarActivity
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
-
         private TextView mineralFormula, mineralColour, mineralAbundance, mineralHardness, mineralLustre, mineralOre, mineralFunFact;
-        private static ArrayList<MineralObject> minerals;
+
         private static int number;
 
         /**
@@ -152,7 +152,6 @@ public class MainActivity extends ActionBarActivity
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
-            minerals = min;
             number = sectionNumber;
 
             return fragment;
@@ -167,7 +166,22 @@ public class MainActivity extends ActionBarActivity
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            mineralFormula = (TextView) rootView.findViewById(R.id.mineralFormula);
+            mineralColour = (TextView) rootView.findViewById(R.id.mineralColour);
+            mineralAbundance = (TextView) rootView.findViewById(R.id.mineralAbundance);
+            mineralHardness = (TextView) rootView.findViewById(R.id.mineralHardness);
+            mineralLustre = (TextView) rootView.findViewById(R.id.mineralLustre);
+            mineralOre = (TextView) rootView.findViewById(R.id.mineralOre);
+            mineralFunFact = (TextView) rootView.findViewById(R.id.mineralFunFact);
 
+            mineralFormula.setText(minerals.get(number-1).getForumla());
+            mineralFormula.setText(minerals.get(number-1).getForumla());
+            mineralColour.setText(minerals.get(number-1).getColour());
+            mineralAbundance.setText(minerals.get(number-1).getAbundance());
+            mineralHardness.setText(minerals.get(number-1).getHardness());
+            mineralLustre.setText(minerals.get(number-1).getLustre());
+            mineralOre.setText(minerals.get(number-1).getOre());
+            mineralFunFact.setText(minerals.get(number-1).getInterestingFact());
             return rootView;
         }
 
@@ -180,22 +194,8 @@ public class MainActivity extends ActionBarActivity
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
-            //super.onCreate(savedInstanceState);
-            mineralFormula = (TextView) getActivity().findViewById(R.id.mineralFormula);
-            mineralColour = (TextView) getActivity().findViewById(R.id.mineralColour);
-            mineralAbundance = (TextView) getActivity().findViewById(R.id.mineralAbundance);
-            mineralHardness = (TextView) getActivity().findViewById(R.id.mineralHardness);
-            mineralLustre = (TextView) getActivity().findViewById(R.id.mineralLustre);
-            mineralOre = (TextView) getActivity().findViewById(R.id.mineralOre);
-            mineralFunFact = (TextView) getActivity().findViewById(R.id.mineralFunFact);
+            super.onCreate(savedInstanceState);
 
-            mineralFormula.setText(minerals.get(number-1).getForumla());
-            mineralColour.setText(minerals.get(number-1).getColour());
-            mineralAbundance.setText(minerals.get(number-1).getAbundance());
-            mineralHardness.setText(minerals.get(number-1).getHardness());
-            mineralLustre.setText(minerals.get(number-1).getLustre());
-            mineralOre.setText(minerals.get(number-1).getOre());
-            mineralFunFact.setText(minerals.get(number-1).getInterestingFact());
         }
     }
 
