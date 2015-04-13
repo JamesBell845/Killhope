@@ -82,7 +82,7 @@ public class MainActivity extends ActionBarActivity
     }
 
     public void onSectionAttached(int number) {
-        mTitle = names.get(number-1);
+        mTitle = rocks[number];
     }
 
     public void restoreActionBar() {
