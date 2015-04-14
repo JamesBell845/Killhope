@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <terms>
+
+    <term>
+        <word>Basalts</word>
+        <definition>a dark fine-grained volcanic rock that sometimes displays a columnar structure, typically composed largely of plagioclase with pyroxene and olivine.</definition>
+    </term>
+
+    <term>
+        <word>Bixial</word>
+        <definition>Having two optic axes, as in the orthorhombic, monoclinic, and triclinic systems.</definition>
+    </term>
+
+    <term>
+        <word>Birefringence</word>
+        <definition>The optical property of a material having a refractive index that depends on the polarization and propagation direction of light.</definition>
+    </term>
+
+    <term>
+        <word>Cabochon</word>
+        <definition>A gem that has been polished but not faceted.</definition>
+    </term>
+
+    <term>
+        <word>Cleavage</word>
+        <definition>The tendency of crystalline materials to split along definite crystallographic structural planes.</definition>
+        <subterms>
+            <subterm>
+                <word>Basal</word>
+                <definition>Minerals with basal cleavage can sometimes be peeled. A good example of basal cleavage is seen on the minerals of the mica group.</definition>
+            </subterm>
+            <subterm>
+                <word>Prismatic</word>
+                <definition>The mineral cleaves by breaking off thin, vertical, prismatic crystals off of the original prism.</definition>
+            </subterm>
+            <subterm>
+                <word> Rhombohedral</word>
+                <definition>Exhibited on minerals that crystallize in the hexagonal crystal system (trigonal), specifically as rhombohedrons, in which small rhombohedrons cleave off of the existing crystal.</definition>
+            </subterm>
+            <subterm>
+                <word>Octahedral</word>
+                <definition>the method of cleavage is that flat, triangular "wedges" peel off of the existing octahedron.</definition>
+            </subterm>
+        </subterms>
+    </term>
+
+    <term>
+        <word>Coxcomb</word>
+        <definition>Aggregate composed of flaky or tabular crystals that are joined from a base with grooves between long, slender, arc-like crystals. The name is derived from a red comb of a rooster ("cock").</definition>
+    </term>
+
+    <term>
+        <word>Crystal Habit</word>
+        <definition>The most commonly found shape or form that a mineral adopts.</definition>
+        <subterms>
+            <subterm>
+                <word>Botryoidal</word>
+                <definition>Having a shape reminiscent of a cluster of grapes.</definition>
+            </subterm>
+            <subterm>
+                <word>Fibrous</word>
+                <definition>Fibre-like.</definition>
+            </subterm>
+            <subterm>
+                <word>Granular</word>
+                <definition>Composed of mineral grains.</definition>
+            </subterm>
+            <subterm>
+                <word>Massive</word>
+                <definition>With no distinguishing crystal form.</definition>
+            </subterm>
+            <subterm>
+                <word>Microcrystalline</word>
+                <definition>Composed of tiny crystals that cannot be seen with an unaided eye. Microcrystalline minerals may appear massive or amorphous since no apparent crystal shape can be detected.</definition>
+            </subterm>
+            <subterm>
+                <word>Prismatic</word>
+                <definition>Forming prismatic crystals, equant (with equal dimensions) to elongated.</definition>
+            </subterm>
+            <subterm>
+                <word>Reticulated</word>
+                <definition>Long crystals in a netting-like form, where all the crystals crisscross each other.</definition>
+            </subterm>
+            <subterm>
+                <word>Rhombohedral</word>
+                <definition>Six sided polyhedron with each side shaped as a rhombus, which have different angles to each other.</definition>
+            </subterm>
+            <subterm>
+                <word>Stalactic</word>
+                <definition>A tapering structure hanging like an icicle from the roof of a cave.</definition>
+            </subterm>
+            <subterm>
+                <word>Tabular</word>
+                <definition>Plate-like.</definition>
+            </subterm>
+            <subterm>
+                <word>Tetrahedral</word>
+                <definition>Is a polyhedron composed of four triangular faces forming triangle-based pyramid.</definition>
+            </subterm>
+        </subterms>
+    </term>
+
+    <term>
+        <word>Crystal Structure</word>
+        <definition>A unique arrangement of atoms, ions or molecules in a crystal.</definition>
+        <subterms>
+            <subterm>
+                <word>Cubic</word>
+                <definition>Quadrilateral shape of a cube.</definition>
+            </subterm>
+            <subterm>
+                <word>Hexagonal </word>
+                <definition>Hexagonal (six-sidesd) prism.</definition>
+            </subterm>
+            <subterm>
+                <word>Octahedral</word>
+                <definition>Eight-faced polyhedron, or two square-based pyramids stuck together at the base.</definition>
+            </subterm>
+            <subterm>
+                <word>Orthorhombic</word>
+                <definition>A crystal system of three perpendicular axes, with the axes all of different lengths. A cuboid, with none of the faces being a square.</definition>
+            </subterm>
+            <subterm>
+                <word>Trigonal</word>
+                <definition>A crystal system with three axes of equal lengths, separated by equal angles that are not right angles.</definition>
+            </subterm>
+        </subterms>
+    </term>
+
+
+    <term>
+        <word>Diabase</word>
+        <definition>Another term for dolerite: a dark, medium-grained igneous rock, typically with ophitic texture, containing plagioclase, pyroxene, and olivine. It typically occurs in dykes and sills.</definition>
+    </term>
+
+    <term>
+        <word>Druzy</word>
+        <definition>A coating of fine crystals on a rock fracture surface, vein or within a vug or geode.</definition>
+    </term>
+
+    <term>
+        <word>Extinction</word>
+        <definition>Optical property of a mineral in thin section, which under cross polarised light does not transmit light (i.e. it goes black) at certain angles.</definition>
+        <subterms>
+            <subterm>
+                <word>Undulose extinction</word>
+                <definition>If a mineral is deformed, strain builds up within the crystal lattice causing it to warp. Different parts of a crystal reach extinction at slightly different angles, giving the crystal an irregular, mottled look. </definition>
+            </subterm>
+        </subterms>
+    </term>
+
+    <term>
+        <word>Fracture</word>
+        <definition>The way a mineral breaks other than along a cleavage plane (random orientations).</definition>
+        <subterms>
+            <subterm>
+                <word>Conchoidal</word>
+                <definition>Fracture surface is a smooth curve, bowl-shaped (common in glass).</definition>
+            </subterm>
+            <subterm>
+                <word>Subconchoidal</word>
+                <definition>Partially or indistinctly conchoidal.</definition>
+            </subterm>
+            <subterm>
+                <word>Uneven</word>
+                <definition>Fracture surface is rough and irregular.</definition>
+            </subterm>
+        </subterms>
+    </term>
+
+    <term>
+        <word>Flux</word>
+        <definition>Chemical cleaning agent, flowing agent, or purifying agent.</definition>
+    </term>
+
+    <term>
+        <word>Gangue mineral</word>
+        <definition>The commercially worthless material that surrounds, or is closely mixed with, a wanted mineral in an ore deposit.</definition>
+    </term>
+
+    <term>
+        <word>Hydrothermal veins</word>
+        <definition>Distinct sheet like body of crystallised minerals in a rock, precipitated from a hot aqueous fluid.</definition>
+    </term>
+
+    <term>
+        <word>Isotropic</word>
+        <definition>Uniformity in all orientations; a grain will appear opaque under a microscope as the light cannot pass through it.</definition>
+    </term>
+
+    <term>
+        <word>Lattice</word>
+        <definition>a crystal lattice can be thought of as an array of 'small boxes' infinitely repeating in all three spatial directions. </definition>
+    </term>
+
+    <term>
+        <word>Lustre</word>
+        <definition>The quality and intensity of light reflected from the surface of a mineral.</definition>
+        <subterms>
+            <subterm>
+                <word>Adamantine</word>
+                <definition>A brilliant lustre such as that of diamond.</definition>
+            </subterm>
+            <subterm>
+                <word>Resinous</word>
+                <definition>A resin-like shine (resembling amber for example).</definition>
+            </subterm>
+            <subterm>
+                <word>Vitreous</word>
+                <definition>Glassy, bright (shines like glass).</definition>
+            </subterm>
+        </subterms>
+    </term>
+
+    <term>
+        <word>Metasomatism</word>
+        <definition>The chemical alteration of a rock by hydrothermal and other fluids.</definition>
+    </term>
+
+    <term>
+        <word></word>
+        <definition></definition>
+    </term>
+
+    <term>
+        <word>Ore</word>
+        <definition>A naturally occurring solid material from which a metal or valuable mineral can be extracted profitably.</definition>
+    </term>
+
+    <term>
+        <word>Oxidation zone</word>
+        <definition>A zone found near the earth’s surface that forms as a result of chemical decomposition of unstable minerals under the action of oxygenated surface waters and groundwater. The oxidation zone extends down to the level of the groundwater and usually ranges from a few meters to a few hundred meters thick. In the oxidation process part of the mineral material of a deposit may be dissolved by the groundwater, percolate downward, and be redeposited below the groundwater level, forming a zone of secondary mineral enrichment.</definition>
+    </term>
+
+    <term>
+        <word>Pegmatite</word>
+        <definition>A coarsely crystalline igneous rock with crystals several centimetres in length.</definition>
+    </term>
+
+    <term>
+        <word>Pseudomorphs</word>
+        <definition>A mineral that chemically replaces another mineral without changing the external form of the original mineral.</definition>
+    </term>
+
+    <term>
+        <word>Pyromorphite</word>
+        <definition>Mineral species composed of lead chlorophosphate, typically occurring as green, yellow, or brown crystals in the oxidized zones of lead deposits.</definition>
+    </term>
+
+    <term>
+        <word>Specific Gravity</word>
+        <definition>The ratio of a mineral’s mass to the mass of an equal volume of water. E.g. galena has a specific gravity of ~7.4, meaning 1cm3 of galena will be 7.4 times as heavy as 1cm3 of water.</definition>
+    </term>
+
+    <term>
+        <word>Streak</word>
+        <definition>The colour of a mineral when powdered/scratched and observed against an unglazed white porcelain plate.</definition>
+    </term>
+
+    <term>
+        <word>Syenitic</word>
+        <definition>A coarse-grained grey igneous rock composed mainly of alkali feldspar and ferromagnesian minerals such as hornblende.</definition>
+    </term>
+
+    <term>
+        <word>Twinning</word>
+        <definition>Occurs when two separate crystals share some of the same crystal lattice points in a symmetrical manner. Results in a mineral showing several different colours, when in fact you are seeing an intergrowth of two crystals joined together in a mutual orientation.</definition>
+        <subterms>
+            <subterm>
+                <word>Contact twins</word>
+                <definition>Share a single composition surface often appearing as mirror images across the boundary.</definition>
+            </subterm>
+            <subterm>
+                <word> Lamellar twins</word>
+                <definition>Many parallel twin individuals, each one having a tabular or plate-like appearance. </definition>
+            </subterm>
+            <subterm>
+                <word>Penetration twins</word>
+                <definition>The individual crystals have the appearance of passing through each other in a symmetrical manner. </definition>
+            </subterm>
+        </subterms>
+    </term>
+
+
+    <term>
+        <word>Uniaxial</word>
+        <definition>Having one optical axis, as in the hexagonal, trigonal, and tetragonal systems.</definition>
+    </term>
+
+</terms>
