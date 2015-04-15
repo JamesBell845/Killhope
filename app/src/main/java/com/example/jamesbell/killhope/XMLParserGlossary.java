@@ -3,7 +3,6 @@ package com.example.jamesbell.killhope;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -51,6 +50,7 @@ public class XMLParserGlossary {
             terms = new ArrayList<GlossaryTerm>();
             int eventType = parser.getEventType();
             GlossaryTerm currentTerm = null;
+            GlossaryTerm currentSubTerm = null;
 
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 String name = null;
@@ -61,10 +61,10 @@ public class XMLParserGlossary {
                     case XmlPullParser.START_TAG:
                         name = parser.getName();
                         if (name.equals("term")) {
-                            currentTerm = new MineralObject();
+                            currentTerm = new GlossaryTerm();
                         } else if (currentTerm != null) {
                             if (name.equals("word")) {
-                                currentTerm.setName(parser.nextText());
+                                currentTerm.setWord(parser.nextText());
                             } else if (name.equals("definition")) {
                                 currentTerm.setDefinition(parser.nextText());
                             }

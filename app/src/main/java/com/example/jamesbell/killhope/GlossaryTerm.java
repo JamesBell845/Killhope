@@ -6,17 +6,18 @@ import java.util.ArrayList;
  * Created by Stephen on 15/04/2015.
  */
 public class GlossaryTerm {
-
-
     private String word;
-
-
     private String definition;
     private ArrayList<GlossaryTerm> subterms;
 
     public GlossaryTerm(String word,String definition){
         this.word = word;
         this.definition = definition;
+        this.subterms = new ArrayList<GlossaryTerm>();
+    }
+
+    public GlossaryTerm(){
+        this.subterms = new ArrayList<GlossaryTerm>();
     }
 
     public ArrayList<GlossaryTerm> getSubterms() {
