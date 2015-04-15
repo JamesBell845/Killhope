@@ -187,6 +187,7 @@ public class MainActivity extends ActionBarActivity
 
             prepareListData();
 
+
             ExpandableListAdapter listAdapter = new ExpandableListAdapter(rootView.getContext(), listDataHeader, listDataChild);
 
             expandable.setAdapter(listAdapter);
