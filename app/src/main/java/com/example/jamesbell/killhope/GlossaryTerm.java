@@ -6,7 +6,11 @@ import java.util.ArrayList;
  * Created by Stephen on 15/04/2015.
  */
 public class GlossaryTerm {
+
+
     private String word;
+
+
     private String definition;
     private ArrayList<GlossaryTerm> subterms;
 
@@ -25,5 +29,19 @@ public class GlossaryTerm {
 
     public String getWord() {
         return word;
+    }
+
+
+    public void setDefinition(java.lang.String definition) {
+        this.definition = definition;
+    }
+
+    public void setWord(java.lang.String word) {
+        this.word = word;
+    }
+
+    public void addSubterm(GlossaryTerm subterm){
+        subterms = this.getSubterms();
+        subterms.add(subterm);
     }
 }

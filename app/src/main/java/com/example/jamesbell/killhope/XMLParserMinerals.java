@@ -1,26 +1,21 @@
 package com.example.jamesbell.killhope;
 
-import android.content.res.AssetManager;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.File;
 import java.util.ArrayList;
 
 /**
  * Created by jamesbell on 11/03/15.
  */
-public class XMLParser {
+public class XMLParserMinerals {
     private XmlPullParserFactory xmlFactoryObject;
     private XmlPullParser parser;
     private ArrayList<MineralObject> minerals;
-    public XMLParser(InputStream fis) {
+    public XMLParserMinerals(InputStream fis) {
         try {
             xmlFactoryObject = XmlPullParserFactory.newInstance();
             xmlFactoryObject.setNamespaceAware(true);
@@ -115,7 +110,6 @@ public class XMLParser {
                         } else if (name.equals("impurities")) {
                             currentMineral.setImpurities(parser.nextText());
                         }
-
                     }
                     break;
                 case XmlPullParser.END_TAG:
