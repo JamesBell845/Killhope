@@ -3,7 +3,7 @@
 
     <term>
         <word>Basalts</word>
-        <definition>a dark fine-grained volcanic rock that sometimes displays a columnar structure, typically composed largely of plagioclase with pyroxene and olivine.</definition>
+        <definition>A dark fine-grained volcanic rock that sometimes displays a columnar structure, typically composed largely of plagioclase with pyroxene and olivine.</definition>
     </term>
 
     <term>
@@ -83,7 +83,7 @@
             </subterm>
             <subterm>
                 <word>Rhombohedral</word>
-                <definition>Six sided polyhedron with each side shaped as a rhombus, which have different angles to each other.</definition>
+                <definition>Six faced polyhedron with each side shaped as a rhombus, which have different angles to each other.</definition>
             </subterm>
             <subterm>
                 <word>Stalactic</word>
@@ -215,11 +215,6 @@
     <term>
         <word>Metasomatism</word>
         <definition>The chemical alteration of a rock by hydrothermal and other fluids.</definition>
-    </term>
-
-    <term>
-        <word></word>
-        <definition></definition>
     </term>
 
     <term>
