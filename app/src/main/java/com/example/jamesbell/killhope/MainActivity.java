@@ -2,6 +2,7 @@ package com.example.jamesbell.killhope;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -219,25 +221,14 @@ public class MainActivity extends ActionBarActivity
 
             expandable.setAdapter(listAdapter);
 
-
             mineralName = (TextView) rootView.findViewById(R.id.mineralName);
-//            mineralFormula = (TextView) rootView.findViewById(R.id.mineralFormula);
-//            mineralColour = (TextView) rootView.findViewById(R.id.mineralColour);
-//            mineralAbundance = (TextView) rootView.findViewById(R.id.mineralAbundance);
-//            mineralHardness = (TextView) rootView.findViewById(R.id.mineralHardness);
-//            mineralLustre = (TextView) rootView.findViewById(R.id.mineralLustre);
-//            mineralOre = (TextView) rootView.findViewById(R.id.mineralOre);
-//            mineralFunFact = (TextView) rootView.findViewById(R.id.mineralFunFact);
-//
             mineralName.setText(minerals.get(number-1).getName());
-//            mineralFormula.setText(minerals.get(number-1).getForumla());
-//            mineralFormula.setText(minerals.get(number-1).getForumla());
-//            mineralColour.setText(minerals.get(number-1).getColour());
-//            mineralAbundance.setText(minerals.get(number-1).getAbundance());
-//            mineralHardness.setText(minerals.get(number-1).getHardness());
-//            mineralLustre.setText(minerals.get(number-1).getLustre());
-//            mineralOre.setText(minerals.get(number-1).getOre());
-//            mineralFunFact.setText(minerals.get(number-1).getInterestingFact());
+
+            ImageView mineralImage = (ImageView) rootView.findViewById(R.id.mineralImage);
+            String url = "@drawable/"+minerals.get(number-1).getName().toLowerCase();
+            int imageResource = getResources().getIdentifier(url, null, rootView.getContext().getPackageName());
+            Drawable res = getResources().getDrawable(imageResource);
+            mineralImage.setImageDrawable(res);
 
             return rootView;
         }
@@ -247,6 +238,47 @@ public class MainActivity extends ActionBarActivity
             listDataHeader.add("Stage 2");
             listDataHeader.add("Stage 3");
             listDataHeader.add("Stage 4");
+
+            List<String> stage1 = new ArrayList<String>();
+            stage1.add("Formula: " + minerals.get(number-1).getForumla());
+            stage1.add("Colour: " + minerals.get(number-1).getColour());
+            stage1.add("Abundance: " + minerals.get(number-1).getAbundance() );
+            stage1.add("Hardness: " + minerals.get(number-1).getHardness());
+            stage1.add("Lustre: " + minerals.get(number-1).getLustre());
+            stage1.add("Ore: " + minerals.get(number-1).getOre());
+            stage1.add("Fun Fact: " + minerals.get(number-1).getInterestingFact());
+
+            List<String> stage2 = new ArrayList<String>();
+            stage2.add("Uses: " + minerals.get(number-1).getUses());
+            stage2.add("Main Countries: " + minerals.get(number-1).getMainCountries());
+            stage2.add("Crystal Habit: " + minerals.get(number-1).getCrystalHabit());
+            stage2.add("Crystal Structure: " + minerals.get(number-1).getCrystalStructure());
+            stage2.add("Depositional Environment: " + minerals.get(number-1).getDepositionalEnviro());
+            stage2.add("Transparency: " + minerals.get(number-1).getTransparency());
+            stage2.add("Origin of Name: " + minerals.get(number-1).getOriginOfName());
+            stage2.add("Colours at Killhope: " + minerals.get(number-1).getColoursAtKillhope());
+
+            List<String> stage3 = new ArrayList<String>();
+            stage3.add("Further Uses: " + minerals.get(number-1).getFurtherUses());
+            stage3.add("Streak: " + minerals.get(number-1).getStreak());
+            stage3.add("Cleavage: " + minerals.get(number-1).getCleavage());
+            stage3.add("Fracture: " + minerals.get(number-1).getFracture());
+
+            List<String> stage4 = new ArrayList<String>();
+            stage4.add("Specific Gravity: " + minerals.get(number-1).getSpecificGravity());
+            stage4.add("Further Properties: " + minerals.get(number-1).getFurtherProperties());
+            stage4.add("Relevance at Killhope: " + minerals.get(number-1).getRelevanceAtKillhope());
+            stage4.add("Specific Gravity: " + minerals.get(number-1).getSpecificGravity());
+            stage4.add("Optical Properties: " + minerals.get(number-1).getOpticalProperties());
+            stage4.add("Impurities: " + minerals.get(number-1).getImpurities());
+
+
+
+            listDataChild.put(listDataHeader.get(0), stage1);
+            listDataChild.put(listDataHeader.get(1),stage2);
+            listDataChild.put(listDataHeader.get(2),stage3);
+            listDataChild.put(listDataHeader.get(3),stage4);
+
         }
 
         @Override

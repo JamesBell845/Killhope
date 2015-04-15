@@ -16,6 +16,15 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/mineralImage"
+        android:layout_below="@+id/mineralName"
+        android:layout_marginTop="0dp"
+        android:scaleType="fitStart"
+        android:layout_centerHorizontal="true" />
+
     <ExpandableListView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -23,7 +32,9 @@
         android:layout_below="@+id/mineralName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="230dp" />
+
+
 
 
 </RelativeLayout>
