@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
+import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -26,6 +27,8 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity
@@ -149,6 +152,8 @@ public class MainActivity extends ActionBarActivity
 
         private TextView mineralName, mineralFormula, mineralColour, mineralAbundance, mineralHardness, mineralLustre, mineralOre, mineralFunFact;
         private static int number;
+        private List<String> listDataHeader;
+        private HashMap<String, List<String>> listDataChild;
 
         /**
          * Returns a new instance of this fragment for the given section
@@ -174,26 +179,70 @@ public class MainActivity extends ActionBarActivity
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-            mineralName = (TextView) rootView.findViewById(R.id.mineralName);
-            mineralFormula = (TextView) rootView.findViewById(R.id.mineralFormula);
-            mineralColour = (TextView) rootView.findViewById(R.id.mineralColour);
-            mineralAbundance = (TextView) rootView.findViewById(R.id.mineralAbundance);
-            mineralHardness = (TextView) rootView.findViewById(R.id.mineralHardness);
-            mineralLustre = (TextView) rootView.findViewById(R.id.mineralLustre);
-            mineralOre = (TextView) rootView.findViewById(R.id.mineralOre);
-            mineralFunFact = (TextView) rootView.findViewById(R.id.mineralFunFact);
+            ExpandableListView expandable = (ExpandableListView) rootView.findViewById(R.id.lvExp);
 
-            mineralName.setText(minerals.get(number-1).getName());
-            mineralFormula.setText(minerals.get(number-1).getForumla());
-            mineralFormula.setText(minerals.get(number-1).getForumla());
-            mineralColour.setText(minerals.get(number-1).getColour());
-            mineralAbundance.setText(minerals.get(number-1).getAbundance());
-            mineralHardness.setText(minerals.get(number-1).getHardness());
-            mineralLustre.setText(minerals.get(number-1).getLustre());
-            mineralOre.setText(minerals.get(number-1).getOre());
-            mineralFunFact.setText(minerals.get(number-1).getInterestingFact());
+            prepareListData();
+
+            ExpandableListAdapter listAdapter = new ExpandableListAdapter(rootView.getContext(), listDataHeader, listDataChild);
+
+            expandable.setAdapter(listAdapter);
+
+
+//            mineralName = (TextView) rootView.findViewById(R.id.mineralName);
+//            mineralFormula = (TextView) rootView.findViewById(R.id.mineralFormula);
+//            mineralColour = (TextView) rootView.findViewById(R.id.mineralColour);
+//            mineralAbundance = (TextView) rootView.findViewById(R.id.mineralAbundance);
+//            mineralHardness = (TextView) rootView.findViewById(R.id.mineralHardness);
+//            mineralLustre = (TextView) rootView.findViewById(R.id.mineralLustre);
+//            mineralOre = (TextView) rootView.findViewById(R.id.mineralOre);
+//            mineralFunFact = (TextView) rootView.findViewById(R.id.mineralFunFact);
+//
+//            mineralName.setText(minerals.get(number-1).getName());
+//            mineralFormula.setText(minerals.get(number-1).getForumla());
+//            mineralFormula.setText(minerals.get(number-1).getForumla());
+//            mineralColour.setText(minerals.get(number-1).getColour());
+//            mineralAbundance.setText(minerals.get(number-1).getAbundance());
+//            mineralHardness.setText(minerals.get(number-1).getHardness());
+//            mineralLustre.setText(minerals.get(number-1).getLustre());
+//            mineralOre.setText(minerals.get(number-1).getOre());
+//            mineralFunFact.setText(minerals.get(number-1).getInterestingFact());
 
             return rootView;
+        }
+
+        private void prepareListData() {
+            listDataHeader.add("Stage 1");
+            listDataHeader.add("Stage 2");
+            listDataHeader.add("Stage 3");
+            listDataHeader.add("Stage 4");
+
+            List<String> top250 = new ArrayList<String>();
+            top250.add("The Shawshank Redemption");
+            top250.add("The Godfather");
+            top250.add("The Godfather: Part II");
+            top250.add("Pulp Fiction");
+            top250.add("The Good, the Bad and the Ugly");
+            top250.add("The Dark Knight");
+            top250.add("12 Angry Men");
+
+            List<String> nowShowing = new ArrayList<String>();
+            nowShowing.add("The Conjuring");
+            nowShowing.add("Despicable Me 2");
+            nowShowing.add("Turbo");
+            nowShowing.add("Grown Ups 2");
+            nowShowing.add("Red 2");
+            nowShowing.add("The Wolverine");
+
+            List<String> comingSoon = new ArrayList<String>();
+            comingSoon.add("2 Guns");
+            comingSoon.add("The Smurfs 2");
+            comingSoon.add("The Spectacular Now");
+            comingSoon.add("The Canyons");
+            comingSoon.add("Europa Report");
+
+            listDataChild.put(listDataHeader.get(0), top250);
+            listDataChild.put(listDataHeader.get(1), nowShowing);
+            listDataChild.put(listDataHeader.get(2), comingSoon);
         }
 
         @Override
