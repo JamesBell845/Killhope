@@ -71,13 +71,10 @@ public class XMLParserGlossary {
                         } else if (name.equals("subterms")) {
                         } else if (name.equals("subterm")) {
                             currentSubTerm = new GlossaryTerm();
-                        } else if (currentSubTerm != null) {
-                            if (name.equals("word")) {
-                                currentSubTerm.setWord(parser.nextText());
-                            } else if (currentSubTerm.getDefinition().equals(null))
-                                if (name.equals("definition")) {
-                                    currentSubTerm.setDefinition(parser.nextText());
-                                }
+                        } else if (name.equals("subword")) {
+                            currentSubTerm.setWord(parser.nextText());
+                        } else if (name.equals("subdefinition")) {
+                            currentSubTerm.setDefinition(parser.nextText());
                         }
                         break;
                     case XmlPullParser.END_TAG:
@@ -86,6 +83,7 @@ public class XMLParserGlossary {
                             terms.add(currentTerm);
                         } else if (name.equalsIgnoreCase("subterm") && currentSubTerm != null) {
                             currentTerm.addSubterm(currentSubTerm);
+
                         } else if (name.equalsIgnoreCase("subterms")) {
                         }
                 }

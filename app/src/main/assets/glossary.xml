@@ -26,20 +26,20 @@
         <definition>The tendency of crystalline materials to split along definite crystallographic structural planes.</definition>
         <subterms>
             <subterm>
-                <word>Basal</word>
-                <definition>Minerals with basal cleavage can sometimes be peeled. A good example of basal cleavage is seen on the minerals of the mica group.</definition>
+                <subword>Basal</subword>
+                <subdefinition>Minerals with basal cleavage can sometimes be peeled. A good example of basal cleavage is seen on the minerals of the mica group.</subdefinition>
             </subterm>
             <subterm>
-                <word>Prismatic</word>
-                <definition>The mineral cleaves by breaking off thin, vertical, prismatic crystals off of the original prism.</definition>
+                <subword>Prismatic</subword>
+                <subdefinition>The mineral cleaves by breaking off thin, vertical, prismatic crystals off of the original prism.</subdefinition>
             </subterm>
             <subterm>
-                <word> Rhombohedral</word>
-                <definition>Exhibited on minerals that crystallize in the hexagonal crystal system (trigonal), specifically as rhombohedrons, in which small rhombohedrons cleave off of the existing crystal.</definition>
+                <subword> Rhombohedral</subword>
+                <subdefinition>Exhibited on minerals that crystallize in the hexagonal crystal system (trigonal), specifically as rhombohedrons, in which small rhombohedrons cleave off of the existing crystal.</subdefinition>
             </subterm>
             <subterm>
-                <word>Octahedral</word>
-                <definition>the method of cleavage is that flat, triangular "wedges" peel off of the existing octahedron.</definition>
+                <subword>Octahedral</subword>
+                <subdefinition>the method of cleavage is that flat, triangular "wedges" peel off of the existing octahedron.</subdefinition>
             </subterm>
         </subterms>
     </term>
@@ -54,48 +54,48 @@
         <definition>The most commonly found shape or form that a mineral adopts.</definition>
         <subterms>
             <subterm>
-                <word>Botryoidal</word>
-                <definition>Having a shape reminiscent of a cluster of grapes.</definition>
+                <subword>Botryoidal</subword>
+                <subdefinition>Having a shape reminiscent of a cluster of grapes.</subdefinition>
             </subterm>
             <subterm>
-                <word>Fibrous</word>
-                <definition>Fibre-like.</definition>
+                <subword>Fibrous</subword>
+                <subdefinition>Fibre-like.</subdefinition>
             </subterm>
             <subterm>
-                <word>Granular</word>
-                <definition>Composed of mineral grains.</definition>
+                <subword>Granular</subword>
+                <subdefinition>Composed of mineral grains.</subdefinition>
             </subterm>
             <subterm>
-                <word>Massive</word>
-                <definition>With no distinguishing crystal form.</definition>
+                <subword>Massive</subword>
+                <subdefinition>With no distinguishing crystal form.</subdefinition>
             </subterm>
             <subterm>
-                <word>Microcrystalline</word>
-                <definition>Composed of tiny crystals that cannot be seen with an unaided eye. Microcrystalline minerals may appear massive or amorphous since no apparent crystal shape can be detected.</definition>
+                <subword>Microcrystalline</subword>
+                <subdefinition>Composed of tiny crystals that cannot be seen with an unaided eye. Microcrystalline minerals may appear massive or amorphous since no apparent crystal shape can be detected.</subdefinition>
             </subterm>
             <subterm>
-                <word>Prismatic</word>
-                <definition>Forming prismatic crystals, equant (with equal dimensions) to elongated.</definition>
+                <subword>Prismatic</subword>
+                <subdefinition>Forming prismatic crystals, equant (with equal dimensions) to elongated.</subdefinition>
             </subterm>
             <subterm>
-                <word>Reticulated</word>
-                <definition>Long crystals in a netting-like form, where all the crystals crisscross each other.</definition>
+                <subword>Reticulated</subword>
+                <subdefinition>Long crystals in a netting-like form, where all the crystals crisscross each other.</subdefinition>
             </subterm>
             <subterm>
-                <word>Rhombohedral</word>
-                <definition>Six faced polyhedron with each side shaped as a rhombus, which have different angles to each other.</definition>
+                <subword>Rhombohedral</subword>
+                <subdefinition>Six faced polyhedron with each side shaped as a rhombus, which have different angles to each other.</subdefinition>
             </subterm>
             <subterm>
-                <word>Stalactic</word>
-                <definition>A tapering structure hanging like an icicle from the roof of a cave.</definition>
+                <subword>Stalactic</subword>
+                <subdefinition>A tapering structure hanging like an icicle from the roof of a cave.</subdefinition>
             </subterm>
             <subterm>
-                <word>Tabular</word>
-                <definition>Plate-like.</definition>
+                <subword>Tabular</subword>
+                <subdefinition>Plate-like.</subdefinition>
             </subterm>
             <subterm>
-                <word>Tetrahedral</word>
-                <definition>Is a polyhedron composed of four triangular faces forming triangle-based pyramid.</definition>
+                <subword>Tetrahedral</subword>
+                <subdefinition>Is a polyhedron composed of four triangular faces forming triangle-based pyramid.</subdefinition>
             </subterm>
         </subterms>
     </term>
@@ -105,24 +105,24 @@
         <definition>A unique arrangement of atoms, ions or molecules in a crystal.</definition>
         <subterms>
             <subterm>
-                <word>Cubic</word>
-                <definition>Quadrilateral shape of a cube.</definition>
+                <subword>Cubic</subword>
+                <subdefinition>Quadrilateral shape of a cube.</subdefinition>
             </subterm>
             <subterm>
-                <word>Hexagonal </word>
-                <definition>Hexagonal (six-sidesd) prism.</definition>
+                <subword>Hexagonal </subword>
+                <subdefinition>Hexagonal (six-sidesd) prism.</subdefinition>
             </subterm>
             <subterm>
-                <word>Octahedral</word>
-                <definition>Eight-faced polyhedron, or two square-based pyramids stuck together at the base.</definition>
+                <subword>Octahedral</subword>
+                <subdefinition>Eight-faced polyhedron, or two square-based pyramids stuck together at the base.</subdefinition>
             </subterm>
             <subterm>
-                <word>Orthorhombic</word>
-                <definition>A crystal system of three perpendicular axes, with the axes all of different lengths. A cuboid, with none of the faces being a square.</definition>
+                <subword>Orthorhombic</subword>
+                <subdefinition>A crystal system of three perpendicular axes, with the axes all of different lengths. A cuboid, with none of the faces being a square.</subdefinition>
             </subterm>
             <subterm>
-                <word>Trigonal</word>
-                <definition>A crystal system with three axes of equal lengths, separated by equal angles that are not right angles.</definition>
+                <subword>Trigonal</subword>
+                <subdefinition>A crystal system with three axes of equal lengths, separated by equal angles that are not right angles.</subdefinition>
             </subterm>
         </subterms>
     </term>
@@ -143,8 +143,8 @@
         <definition>Optical property of a mineral in thin section, which under cross polarised light does not transmit light (i.e. it goes black) at certain angles.</definition>
         <subterms>
             <subterm>
-                <word>Undulose extinction</word>
-                <definition>If a mineral is deformed, strain builds up within the crystal lattice causing it to warp. Different parts of a crystal reach extinction at slightly different angles, giving the crystal an irregular, mottled look. </definition>
+                <subword>Undulose extinction</subword>
+                <subdefinition>If a mineral is deformed, strain builds up within the crystal lattice causing it to warp. Different parts of a crystal reach extinction at slightly different angles, giving the crystal an irregular, mottled look. </subdefinition>
             </subterm>
         </subterms>
     </term>
@@ -154,16 +154,16 @@
         <definition>The way a mineral breaks other than along a cleavage plane (random orientations).</definition>
         <subterms>
             <subterm>
-                <word>Conchoidal</word>
-                <definition>Fracture surface is a smooth curve, bowl-shaped (common in glass).</definition>
+                <subword>Conchoidal</subword>
+                <subdefinition>Fracture surface is a smooth curve, bowl-shaped (common in glass).</subdefinition>
             </subterm>
             <subterm>
-                <word>Subconchoidal</word>
-                <definition>Partially or indistinctly conchoidal.</definition>
+                <subword>Subconchoidal</subword>
+                <subdefinition>Partially or indistinctly conchoidal.</subdefinition>
             </subterm>
             <subterm>
-                <word>Uneven</word>
-                <definition>Fracture surface is rough and irregular.</definition>
+                <subword>Uneven</subword>
+                <subdefinition>Fracture surface is rough and irregular.</subdefinition>
             </subterm>
         </subterms>
     </term>
@@ -198,16 +198,16 @@
         <definition>The quality and intensity of light reflected from the surface of a mineral.</definition>
         <subterms>
             <subterm>
-                <word>Adamantine</word>
-                <definition>A brilliant lustre such as that of diamond.</definition>
+                <subword>Adamantine</subword>
+                <subdefinition>A brilliant lustre such as that of diamond.</subdefinition>
             </subterm>
             <subterm>
-                <word>Resinous</word>
-                <definition>A resin-like shine (resembling amber for example).</definition>
+                <subword>Resinous</subword>
+                <subdefinition>A resin-like shine (resembling amber for example).</subdefinition>
             </subterm>
             <subterm>
-                <word>Vitreous</word>
-                <definition>Glassy, bright (shines like glass).</definition>
+                <subword>Vitreous</subword>
+                <subdefinition>Glassy, bright (shines like glass).</subdefinition>
             </subterm>
         </subterms>
     </term>
@@ -262,16 +262,16 @@
         <definition>Occurs when two separate crystals share some of the same crystal lattice points in a symmetrical manner. Results in a mineral showing several different colours, when in fact you are seeing an intergrowth of two crystals joined together in a mutual orientation.</definition>
         <subterms>
             <subterm>
-                <word>Contact twins</word>
-                <definition>Share a single composition surface often appearing as mirror images across the boundary.</definition>
+                <subword>Contact twins</subword>
+                <subdefinition>Share a single composition surface often appearing as mirror images across the boundary.</subdefinition>
             </subterm>
             <subterm>
-                <word> Lamellar twins</word>
-                <definition>Many parallel twin individuals, each one having a tabular or plate-like appearance. </definition>
+                <subword> Lamellar twins</subword>
+                <subdefinition>Many parallel twin individuals, each one having a tabular or plate-like appearance. </subdefinition>
             </subterm>
             <subterm>
-                <word>Penetration twins</word>
-                <definition>The individual crystals have the appearance of passing through each other in a symmetrical manner. </definition>
+                <subword>Penetration twins</subword>
+                <subdefinition>The individual crystals have the appearance of passing through each other in a symmetrical manner. </subdefinition>
             </subterm>
         </subterms>
     </term>
