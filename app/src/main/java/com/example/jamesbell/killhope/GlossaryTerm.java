@@ -13,6 +13,11 @@ public class GlossaryTerm {
     public GlossaryTerm(String word,String definition){
         this.word = word;
         this.definition = definition;
+        this.subterms = new ArrayList<GlossaryTerm>();
+    }
+
+    public GlossaryTerm(){
+        this.subterms = new ArrayList<GlossaryTerm>();
     }
 
     public ArrayList<GlossaryTerm> getSubterms() {
@@ -25,5 +30,19 @@ public class GlossaryTerm {
 
     public String getWord() {
         return word;
+    }
+
+
+    public void setDefinition(java.lang.String definition) {
+        this.definition = definition;
+    }
+
+    public void setWord(java.lang.String word) {
+        this.word = word;
+    }
+
+    public void addSubterm(GlossaryTerm subterm){
+        subterms = this.getSubterms();
+        subterms.add(subterm);
     }
 }

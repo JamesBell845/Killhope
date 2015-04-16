@@ -17,7 +17,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.io.IOException;
@@ -41,6 +43,7 @@ public class MainActivity extends ActionBarActivity
     private CharSequence mTitle;
     private ArrayList<String> names;
     public static ArrayList<MineralObject> minerals;
+    public static ArrayList<GlossaryTerm> terms;
 
     //Data
 
@@ -65,6 +68,15 @@ public class MainActivity extends ActionBarActivity
             names.add(mo.getName());
         }
 
+        InputStream glossStream = null;
+        try {
+            glossStream = getApplicationContext().getAssets().open("glossary.xml");
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        XMLParserGlossary glossParser = new XMLParserGlossary(glossStream);
+        terms = glossParser.getTerms();
+
 
 
         ListView drawerList = (ListView) findViewById(R.id.drawerList);
@@ -87,7 +99,7 @@ public class MainActivity extends ActionBarActivity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, MineralFragment.newInstance(position + 1))
                 .commit();
     }
 
@@ -153,8 +165,23 @@ public class MainActivity extends ActionBarActivity
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_glossary, container, false);
 
+            ExpandableListView glossaryList = (ExpandableListView) rootView.findViewById(R.id.glossaryList);
 
-
+            List<String> termsList = new ArrayList<String>();
+            HashMap<String, List<String>> termsDefinition = new HashMap<String, List<String>>();
+            int i = 0;
+            for(GlossaryTerm t: terms){
+                termsList.add(t.getWord());
+                List<String> sub = new ArrayList<String>();
+                sub.add(t.getDefinition());
+                for(GlossaryTerm s: t.getSubterms()){
+                    sub.add("Subterm: " + s.getWord() + ": " + s.getDefinition());
+                }
+                termsDefinition.put(termsList.get(i),sub);
+                i = i + 1;
+            }
+            ExpandableListAdapter adapter = new ExpandableListAdapter(rootView.getContext(),termsList,termsDefinition);
+            glossaryList.setAdapter(adapter);
             return rootView;
         }
 
@@ -172,7 +199,7 @@ public class MainActivity extends ActionBarActivity
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public static class MineralFragment extends Fragment {
         /**
          * The fragment argument representing the section number for this
          * fragment.
@@ -188,8 +215,8 @@ public class MainActivity extends ActionBarActivity
          * Returns a new instance of this fragment for the given section
          * number.
          */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
+        public static MineralFragment newInstance(int sectionNumber) {
+            MineralFragment fragment = new MineralFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
@@ -199,7 +226,7 @@ public class MainActivity extends ActionBarActivity
             return fragment;
         }
 
-        public PlaceholderFragment() {
+        public MineralFragment() {
 
 
         }
