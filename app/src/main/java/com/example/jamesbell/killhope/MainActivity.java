@@ -61,7 +61,7 @@ public class MainActivity extends ActionBarActivity
         } catch (IOException e) {
             e.printStackTrace();
         }
-        XMLParser parser = new XMLParser(stream);
+        XMLParserMinerals parser = new XMLParserMinerals(stream);
         minerals = parser.getMinerals();
         names = new ArrayList<String>();
         for(MineralObject mo: minerals){
