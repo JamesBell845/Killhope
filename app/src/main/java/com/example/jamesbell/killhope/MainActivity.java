@@ -21,6 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -115,6 +116,16 @@ public class MainActivity extends ActionBarActivity
         actionBar.setDisplayShowHomeEnabled(false);
         actionBar.setDisplayShowCustomEnabled(true);
         final ViewGroup customHeader = (ViewGroup) getLayoutInflater().inflate(R.layout.customer_header,null);
+        ImageView imgFavorite = (ImageView) customHeader.findViewById(R.id.logo);
+        imgFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, HomeFragment.newInstance())
+                        .commit();
+            }
+        });
         actionBar.setCustomView(customHeader);
 
     }
@@ -170,18 +181,37 @@ public class MainActivity extends ActionBarActivity
             List<String> termsList = new ArrayList<String>();
             HashMap<String, List<String>> termsDefinition = new HashMap<String, List<String>>();
             int i = 0;
-            for(GlossaryTerm t: terms){
+            for (GlossaryTerm t : terms) {
                 termsList.add(t.getWord());
                 List<String> sub = new ArrayList<String>();
                 sub.add(t.getDefinition());
-                for(GlossaryTerm s: t.getSubterms()){
+                for (GlossaryTerm s : t.getSubterms()) {
                     sub.add("Subterm: " + s.getWord() + ": " + s.getDefinition());
                 }
-                termsDefinition.put(termsList.get(i),sub);
+                termsDefinition.put(termsList.get(i), sub);
                 i = i + 1;
             }
-            ExpandableListAdapter adapter = new ExpandableListAdapter(rootView.getContext(),termsList,termsDefinition);
+            ExpandableListAdapter adapter = new ExpandableListAdapter(rootView.getContext(), termsList, termsDefinition);
             glossaryList.setAdapter(adapter);
+            return rootView;
+        }
+
+    }
+    public static class HomeFragment extends Fragment {
+
+        public static HomeFragment newInstance() {
+            HomeFragment fragment = new HomeFragment();
+            Bundle args = new Bundle();
+            fragment.setArguments(args);
+            return fragment;
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.home_layout, container, false);
+
+
             return rootView;
         }
 
@@ -322,3 +352,4 @@ public class MainActivity extends ActionBarActivity
     }
 
 }
+
