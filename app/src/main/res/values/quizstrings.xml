@@ -1,119 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="question1">What is the hardest mineral on display at Killhope?</string>
-    <string name="x1answer1"></string>
-    <string name="x1answer2"></string>
-    <string name="x1answer3"></string>
+    <string name="x1answer1">Quartz</string>
+    <string name="x1answer2">Baryte</string>
+    <string name="x1answer3">Galena</string>
 
     <string name="question2">Which grey mineral is an ore of lead?</string>
-    <string name="x2answer1"></string>
-    <string name="x2answer2"></string>
-    <string name="x2answer3"></string>
+    <string name="x2answer1">Siderite</string>
+    <string name="x2answer2">Galena</string>
+    <string name="x2answer3">Sphalerite</string>
 
     <string name="question3">What mineral was predominantly mined at Killhope?</string>
-    <string name="x3answer1"></string>
-    <string name="x3answer2"></string>
-    <string name="x3answer3"></string>
+    <string name="x3answer1">Galena</string>
+    <string name="x3answer2">Fluorite</string>
+    <string name="x3answer3">Siderite</string>
 
     <string name="question4">What is the most common mineral at the Killhope Museum?</string>
-    <string name="x4answer1"></string>
-    <string name="x4answer2"></string>
-    <string name="x4answer3"></string>
+    <string name="x4answer1">Quartz</string>
+    <string name="x4answer2">Fluorite</string>
+    <string name="x4answer3">Smithsonite</string>
 
     <string name="question5">What is a Spar Box?</string>
-    <string name="x5answer1"></string>
-    <string name="x5answer2"></string>
-    <string name="x5answer3"></string>
+    <string name="x5answer1">A decorative box containing minerals created by miners from the Killhope area.</string>
+    <string name="x5answer2">A miner's lunchbox</string>
+    <string name="x5answer3">A box for miners cigarettes</string>
 
     <string name="question6">Is Killhope still an active mine?</string>
-    <string name="x6answer1"></string>
-    <string name="x6answer2"></string>
-    <string name="x6answer3"></string>
+    <string name="x6answer1">No</string>
+    <string name="x6answer2">It is sometimes used for the extraction of gold</string>
+    <string name="x6answer3">Yes it is still fully active</string>
 
     <string name="question7">Which mineral is used in the production of toothpaste?</string>
-    <string name="x7answer1"></string>
-    <string name="x7answer2"></string>
-    <string name="x7answer3"></string>
+    <string name="x7answer1">Limonite</string>
+    <string name="x7answer2">Witherite</string>
+    <string name="x7answer3">Fluorite</string>
 
     <string name="question8">After what mineral is the property fluorescence named?</string>
-    <string name="x8answer1"></string>
-    <string name="x8answer2"></string>
-    <string name="x8answer3"></string>
+    <string name="x8answer1">Quartz</string>
+    <string name="x8answer2">Fluorite</string>
+    <string name="x8answer3">Smithsonite</string>
 
     <string name="question9">What’s an ore?</string>
-    <string name="x9answer1"></string>
-    <string name="x9answer2"></string>
-    <string name="x9answer3"></string>
+    <string name="x9answer1">A mineral which is grey in colour</string>
+    <string name="x9answer2">A naturally occurring solid material which can be extracted profitably</string>
+    <string name="x9answer3">A small tool used by miners at Killhope</string>
 
     <string name="question10">Which mineral at Killhope exhibits the most different colours?</string>
-    <string name="x10answer1"></string>
-    <string name="x10answer2"></string>
-    <string name="x10answer3"></string>
+    <string name="x10answer1">Fluorite</string>
+    <string name="x10answer2">Calcite</string>
+    <string name="x10answer3">Quartz</string>
 
     <string name="question11">Which mineral has the chemical formula CaCO3?</string>
-    <string name="x11answer1"></string>
-    <string name="x11answer2"></string>
-    <string name="x11answer3"></string>
+    <string name="x11answer1">Aragonite</string>
+    <string name="x11answer2">Ankerite</string>
+    <string name="x11answer3">Barytocalcite</string>
 
     <string name="question12">Smithsonite is an ore of which metal?</string>
-    <string name="x12answer1"></string>
-    <string name="x12answer2"></string>
-    <string name="x12answer3"></string>
+    <string name="x12answer1">Lead</string>
+    <string name="x12answer2">Iron</string>
+    <string name="x12answer3">Zinc</string>
 
     <string name="question13">How long ago did the Whin Sill Intrusion form?</string>
-    <string name="x13answer1"></string>
-    <string name="x13answer2"></string>
-    <string name="x13answer3"></string>
+    <string name="x13answer1">200 Million years ago</string>
+    <string name="x13answer2">300 Million years ago</string>
+    <string name="x13answer3">400 Million years ago</string>
 
     <string name="question14">What do cerussite and galena have in common?</string>
-    <string name="x14answer1"></string>
-    <string name="x14answer2"></string>
-    <string name="x14answer3"></string>
+    <string name="x14answer1">Both exhibit a range of colours</string>
+    <string name="x14answer2">Both are ores of lead</string>
+    <string name="x14answer3">Both have the same hardness</string>
 
     <string name="question15">How is flourite deposited?</string>
-    <string name="x15answer1"></string>
-    <string name="x15answer2"></string>
-    <string name="x15answer3"></string>
+    <string name="x15answer1">In tropical caves</string>
+    <string name="x15answer2">In hydrothermal veins</string>
+    <string name="x15answer3">During evaporation processes</string>
 
     <string name="question16">What is the most common colour of quartz?</string>
-    <string name="x16answer1"></string>
-    <string name="x16answer2"></string>
-    <string name="x16answer3"></string>
+    <string name="x16answer1">Purple</string>
+    <string name="x16answer2">Colourless</string>
+    <string name="x16answer3">Green</string>
 
     <string name="question17">What mineral was once used in the production of rat poison?</string>
-    <string name="x17answer1"></string>
-    <string name="x17answer2"></string>
-    <string name="x17answer3"></string>
+    <string name="x17answer1">Witherite</string>
+    <string name="x17answer2">Siderite</string>
+    <string name="x17answer3">Limonite</string>
 
     <string name="question18">What is the large igneous body that underlies the North Pennines called?</string>
-    <string name="x18answer1"></string>
-    <string name="x18answer2"></string>
-    <string name="x18answer3"></string>
+    <string name="x18answer1">Alston andesite</string>
+    <string name="x18answer2">Killhope intrusion</string>
+    <string name="x18answer3">Weardale granite</string>
 
     <string name="question19">What is cleavage?</string>
-    <string name="x19answer1"></string>
-    <string name="x19answer2"></string>
-    <string name="x19answer3"></string>
+    <string name="x19answer1">An iron ore mineral</string>
+    <string name="x19answer2">A fold in a rock</string>
+    <string name="x19answer3">The tendency of crystalline materials to split along definite crystallographic structural planes</string>
 
     <string name="question20">What is streak?</string>
-    <string name="x20answer1"></string>
-    <string name="x20answer2"></string>
-    <string name="x20answer3"></string>
+    <string name="x20answer1">Colour of a mineral when scratched on a white porcelain plate</string>
+    <string name="x20answer2">The colour of a mineral under ultraviolet light</string>
+    <string name="x20answer3">The tendency for a mineral to be deposited in veins</string>
 
     <string name="question21">Which mineral is a pseudomorph (no crystal structure)?</string>
-    <string name="x21answer1"></string>
-    <string name="x21answer2"></string>
-    <string name="x21answer3"></string>
+    <string name="x21answer1">Cerussite</string>
+    <string name="x21answer2">Limonite</string>
+    <string name="x21answer3">Smithsonite</string>
 
     <string name="question22">Which mineral was used to fabricate World War II weapon sights?</string>
-    <string name="x22answer1"></string>
-    <string name="x22answer2"></string>
-    <string name="x22answer3"></string>
+    <string name="x22answer1">Barytocalcite</string>
+    <string name="x22answer2">Baryte</string>
+    <string name="x22answer3">Calcite</string>
 
     <string name="question23">What lustre does baryte exhibit?</string>
-    <string name="x23answer1"></string>
-    <string name="x23answer2"></string>
-    <string name="x23answer3"></string>
+    <string name="x23answer1">Resinous</string>
+    <string name="x23answer2">Earthy</string>
+    <string name="x23answer3">Vitreous</string>
 
     <string name="question24">What is the crystal structure of sphalerite?</string>
     <string name="x24answer1"></string>
