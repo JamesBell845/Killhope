@@ -17,6 +17,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -242,7 +243,9 @@ public class MainActivity extends ActionBarActivity
                                  Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.home_layout, container, false);
 
-            Button timelineButton = (Button) rootView.findViewById(R.id.timelineButton);
+            ImageButton timelineButton = (ImageButton) rootView.findViewById(R.id.timelineButton);
+
+
             timelineButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -253,7 +256,7 @@ public class MainActivity extends ActionBarActivity
                 }
             });
 
-            Button historyButton = (Button) rootView.findViewById(R.id.historyButton);
+            ImageButton historyButton = (ImageButton) rootView.findViewById(R.id.historyButton);
             historyButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -264,7 +267,7 @@ public class MainActivity extends ActionBarActivity
                 }
             });
 
-            Button glossaryButton = (Button) rootView.findViewById(R.id.glossaryButton);
+            ImageButton glossaryButton = (ImageButton) rootView.findViewById(R.id.glossaryButton);
             glossaryButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -275,7 +278,7 @@ public class MainActivity extends ActionBarActivity
                 }
             });
 
-            Button quizButton = (Button) rootView.findViewById(R.id.quizButton);
+            ImageButton quizButton = (ImageButton) rootView.findViewById(R.id.quizButton);
             quizButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

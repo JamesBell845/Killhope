@@ -2,51 +2,57 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Homepage"
-        android:textAlignment="center"
-        android:id="@+id/textView"
+
+
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitStart"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:id="@+id/timelineButton"
+        android:src="@drawable/timeline_button"
+        android:background="@color/background_material_light"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Timeline"
-        android:id="@+id/timelineButton"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="History"
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitStart"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
         android:id="@+id/historyButton"
+        android:src="@drawable/history"
+        android:background="@color/background_material_light"
         android:layout_below="@+id/timelineButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Glossary"
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitStart"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
         android:id="@+id/glossaryButton"
+        android:src="@drawable/glossary"
+        android:background="@color/background_material_light"
         android:layout_below="@+id/historyButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quiz"
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitStart"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
         android:id="@+id/quizButton"
+        android:src="@drawable/quiz"
+        android:background="@color/background_material_light"
         android:layout_below="@+id/glossaryButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
