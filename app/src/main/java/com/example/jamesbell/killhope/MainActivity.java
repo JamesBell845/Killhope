@@ -228,6 +228,17 @@ public class MainActivity extends ActionBarActivity
                 }
             });
 
+            Button historyButton = (Button) rootView.findViewById(R.id.historyButton);
+            historyButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentManager fragmentManager = getFragmentManager();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.container, HistoryFragment.newInstance())
+                            .commit();
+                }
+            });
+
             return rootView;
         }
 
