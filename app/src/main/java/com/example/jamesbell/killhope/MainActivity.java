@@ -465,8 +465,8 @@ public class MainActivity extends ActionBarActivity
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.endquiz_fragment, container, false);
-
-
+            TextView score = (TextView) rootView.findViewById(R.id.score);
+            score.setText("You scored: " + String.valueOf(score));
             return rootView;
         }
 
