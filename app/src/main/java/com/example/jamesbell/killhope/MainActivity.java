@@ -20,6 +20,7 @@ import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -99,6 +100,27 @@ public class MainActivity extends ActionBarActivity
                 .replace(R.id.container, HomeFragment.newInstance())
                 .commit();
 
+    }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.answer1:
+                if (checked)
+                    // Pirates are the best
+                    break;
+            case R.id.answer2:
+                if (checked)
+                    // Ninjas rule
+                    break;
+            case R.id.answer3:
+                if (checked)
+
+                    break;
+        }
     }
 
     @Override
@@ -250,6 +272,17 @@ public class MainActivity extends ActionBarActivity
                 }
             });
 
+            Button quizButton = (Button) rootView.findViewById(R.id.quizButton);
+            quizButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentManager fragmentManager = getFragmentManager();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.container, QuestionFragment.newInstance(0,0))
+                            .commit();
+                }
+            });
+
             return rootView;
         }
 
@@ -278,6 +311,42 @@ public class MainActivity extends ActionBarActivity
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_timeline, container, false);
 
+
+            return rootView;
+        }
+
+        @Override
+        public void onAttach(Activity activity) {
+            super.onAttach(activity);
+        }
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+        }
+    }
+
+    public static class QuestionFragment extends Fragment {
+
+        private static int questionNum;
+        private static int currentScore;
+
+        public static QuestionFragment newInstance(int questionN, int currentS) {
+            QuestionFragment fragment = new QuestionFragment();
+            Bundle args = new Bundle();
+            fragment.setArguments(args);
+            questionNum = questionN;
+            currentScore = currentS;
+            return fragment;
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.question_layout, container, false);
+            if(questionNum == 0){
+                Toast.makeText(rootView.getContext(),"Don't leave the quiz until it's finished",Toast.LENGTH_LONG).show();
+            }
 
             return rootView;
         }
