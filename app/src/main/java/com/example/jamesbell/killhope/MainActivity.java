@@ -353,6 +353,23 @@ public class MainActivity extends ActionBarActivity
             }
             TextView questionText = (TextView) rootView.findViewById(R.id.questionText);
             TextView questionNumber = (TextView) rootView.findViewById(R.id.questionNumberText);
+
+            RadioButton answer1 = (RadioButton) rootView.findViewById(R.id.answer1);
+            RadioButton answer2 = (RadioButton) rootView.findViewById(R.id.answer2);
+            RadioButton answer3 = (RadioButton) rootView.findViewById(R.id.answer3);
+
+            String url1 = "@string/x"+String.valueOf(questionNum+1)+"answer1";
+            int stringid1 = getResources().getIdentifier(url1, null, rootView.getContext().getPackageName());
+            answer1.setText(getString(stringid1));
+
+            String url2 = "@string/x"+String.valueOf(questionNum+1)+"answer2";
+            int stringid2 = getResources().getIdentifier(url2, null, rootView.getContext().getPackageName());
+            answer2.setText(getString(stringid2));
+
+            String url3 = "@string/x"+String.valueOf(questionNum+1)+"answer3";
+            int stringid3 = getResources().getIdentifier(url3, null, rootView.getContext().getPackageName());
+            answer3.setText(getString(stringid3));
+
             questionNumber.setText("Question Number: " + String.valueOf(questionNum+1));
             String url = "@string/question"+String.valueOf(questionNum+1);
             int stringid = getResources().getIdentifier(url, null, rootView.getContext().getPackageName());
