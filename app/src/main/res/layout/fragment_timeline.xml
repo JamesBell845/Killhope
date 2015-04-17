@@ -3,11 +3,20 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+    <com.example.jamesbell.killhope.AspectRatioImageView
+        android:id="@+id/image"
+        android:src="@drawable/timeline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/timelineImage"
-        android:nestedScrollingEnabled="true"
-        android:layout_gravity="start"
-        android:src="@drawable/timeline"/>
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        />
+
+   </ScrollView>
 </LinearLayout>
