@@ -376,10 +376,10 @@ public class MainActivity extends ActionBarActivity
         }
 
         private void prepareListData() {
-            listDataHeader.add("Stage 1");
-            listDataHeader.add("Stage 2");
-            listDataHeader.add("Stage 3");
-            listDataHeader.add("Stage 4");
+            listDataHeader.add("Basic Information");
+            listDataHeader.add("Intermediate Information");
+            listDataHeader.add("Advanced Information");
+            listDataHeader.add("Expert Information");
 
             List<String> stage1 = new ArrayList<String>();
             stage1.add("Formula: " + minerals.get(number-1).getForumla());
