@@ -42,7 +42,6 @@ public class GlossaryTerm {
     }
 
     public void addSubterm(GlossaryTerm subterm){
-        subterms = this.getSubterms();
         subterms.add(subterm);
     }
 }
