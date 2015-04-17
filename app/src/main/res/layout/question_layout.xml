@@ -16,10 +16,22 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Score"
+        android:id="@+id/score"
+        android:layout_below="@id/questionNumberText"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Question Text"
         android:id="@+id/questionText"
         android:layout_marginTop="56dp"
+        android:layout_below="@id/questionText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -59,5 +71,15 @@
             android:layout_marginTop="56dp"
             android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/nextQuestionButton"
+        android:layout_below="@+id/answers"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp" />
+
 
 </RelativeLayout>

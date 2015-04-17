@@ -25,6 +25,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -47,6 +49,7 @@ public class MainActivity extends ActionBarActivity
     private ArrayList<String> names;
     public static ArrayList<MineralObject> minerals;
     public static ArrayList<GlossaryTerm> terms;
+    public static int checkedAns;
 
     //Data
 
@@ -110,15 +113,15 @@ public class MainActivity extends ActionBarActivity
         switch(view.getId()) {
             case R.id.answer1:
                 if (checked)
-                    // Pirates are the best
+                    checkedAns = 1;
                     break;
             case R.id.answer2:
                 if (checked)
-                    // Ninjas rule
+                    checkedAns = 2;
                     break;
             case R.id.answer3:
                 if (checked)
-
+                    checkedAns = 3;
                     break;
         }
     }
@@ -343,11 +346,34 @@ public class MainActivity extends ActionBarActivity
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.question_layout, container, false);
+            final View rootView = inflater.inflate(R.layout.question_layout, container, false);
+            checkedAns = 0;
             if(questionNum == 0){
                 Toast.makeText(rootView.getContext(),"Don't leave the quiz until it's finished",Toast.LENGTH_LONG).show();
             }
-
+            TextView questionText = (TextView) rootView.findViewById(R.id.questionText);
+            TextView questionNumber = (TextView) rootView.findViewById(R.id.questionNumberText);
+            questionNumber.setText("Question Number: " + String.valueOf(questionNum+1));
+            String url = "@string/question"+String.valueOf(questionNum+1);
+            int stringid = getResources().getIdentifier(url, null, rootView.getContext().getPackageName());
+            questionText.setText(getString(stringid));
+            TextView scoreText = (TextView) rootView.findViewById(R.id.score);
+            scoreText.setText("Score: " + String.valueOf(currentScore));
+            Button nextQuestionButton = (Button) rootView.findViewById(R.id.nextQuestionButton);
+            nextQuestionButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int newScore = currentScore + 1;
+                    if(checkedAns != 0) {
+                        FragmentManager fragmentManager = getFragmentManager();
+                        fragmentManager.beginTransaction()
+                                .replace(R.id.container, QuestionFragment.newInstance(questionNum + 1, newScore))
+                                .commit();
+                    }else{
+                        Toast.makeText(rootView.getContext(),"Please select an answer", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
             return rootView;
         }
 

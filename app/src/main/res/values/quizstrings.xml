@@ -22,7 +22,7 @@
 
     <string name="question5">What is a Spar Box?</string>
     <string name="x5answer1">A decorative box containing minerals created by miners from the Killhope area.</string>
-    <string name="x5answer2">A miner's lunchbox</string>
+    <string name="x5answer2">A miner\'s lunchbox</string>
     <string name="x5answer3">A box for miners cigarettes</string>
 
     <string name="question6">Is Killhope still an active mine?</string>
