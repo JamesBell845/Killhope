@@ -397,11 +397,12 @@ public class MainActivity extends ActionBarActivity
                             fragmentManager.beginTransaction()
                                     .replace(R.id.container, EndQuizFragment.newInstance(newScore))
                                     .commit();
+                        }else {
+                            FragmentManager fragmentManager = getFragmentManager();
+                            fragmentManager.beginTransaction()
+                                    .replace(R.id.container, QuestionFragment.newInstance(questionNum + 1, newScore))
+                                    .commit();
                         }
-                        FragmentManager fragmentManager = getFragmentManager();
-                        fragmentManager.beginTransaction()
-                                .replace(R.id.container, QuestionFragment.newInstance(questionNum + 1, newScore))
-                                .commit();
                     }else{
                         Toast.makeText(rootView.getContext(),"Please select an answer", Toast.LENGTH_LONG).show();
                     }
