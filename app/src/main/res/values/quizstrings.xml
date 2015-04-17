@@ -116,38 +116,38 @@
     <string name="x23answer3">Vitreous</string>
 
     <string name="question24">What is the crystal structure of sphalerite?</string>
-    <string name="x24answer1"></string>
-    <string name="x24answer2"></string>
-    <string name="x24answer3"></string>
+    <string name="x24answer1">Orthorhombic</string>
+    <string name="x24answer2">Cubic</string>
+    <string name="x24answer3">Hexagonal</string>
 
     <string name="question25">Twinning refers to what optical property?</string>
-    <string name="x25answer1"></string>
-    <string name="x25answer2"></string>
-    <string name="x25answer3"></string>
+    <string name="x25answer1">An intergrowth of two separate crystals</string>
+    <string name="x25answer2">The point at which a mineral turns black under a microscope</string>
+    <string name="x25answer3">One crystal exhibiting several colours</string>
 
     <string name="question26">What is the specific gravity of galena?</string>
-    <string name="x26answer1"></string>
-    <string name="x26answer2"></string>
-    <string name="x26answer3"></string>
+    <string name="x26answer1">7.4&#8211;7.6</string>
+    <string name="x26answer2">4.7</string>
+    <string name="x26answer3">2.8&#8211;3.0</string>
 
     <string name="question27">What fruit does a botryoidal crystal structure closely represent?</string>
-    <string name="x27answer1"></string>
-    <string name="x27answer2"></string>
-    <string name="x27answer3"></string>
+    <string name="x27answer1">Banana</string>
+    <string name="x27answer2">Pomegranate</string>
+    <string name="x27answer3">Grapes</string>
 
     <string name="question28">What is a gangue mineral?</string>
-    <string name="x28answer1"></string>
-    <string name="x28answer2"></string>
-    <string name="x28answer3"></string>
+    <string name="x28answer1">Worthless material deposited alongside an ore</string>
+    <string name="x28answer2">Material of high value</string>
+    <string name="x28answer3">An ore of iron</string>
 
     <string name="question29">Which intrusion shares a source with the North Pennine Ore Field?</string>
-    <string name="x29answer1"></string>
-    <string name="x29answer2"></string>
-    <string name="x29answer3"></string>
+    <string name="x29answer1">Weardale Granite</string>
+    <string name="x29answer2">North Pennine Rhyolite</string>
+    <string name="x29answer3">Whin Sill Dolerite</string>
 
     <string name="question30">What is the crystal structure of fluorite?</string>
-    <string name="x30answer1"></string>
-    <string name="x30answer2"></string>
-    <string name="x30answer3"></string>
+    <string name="x30answer1">Prismatic</string>
+    <string name="x30answer2">Cubic</string>
+    <string name="x30answer3">Octahedral</string>
 
 </resources>
