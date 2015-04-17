@@ -239,6 +239,17 @@ public class MainActivity extends ActionBarActivity
                 }
             });
 
+            Button glossaryButton = (Button) rootView.findViewById(R.id.glossaryButton);
+            glossaryButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentManager fragmentManager = getFragmentManager();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.container, GlossaryFragment.newInstance())
+                            .commit();
+                }
+            });
+
             return rootView;
         }
 

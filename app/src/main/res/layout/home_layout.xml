@@ -30,4 +30,13 @@
         android:layout_below="@+id/timelineButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glossary"
+        android:id="@+id/glossaryButton"
+        android:layout_below="@+id/historyButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
 </RelativeLayout>
