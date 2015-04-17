@@ -336,8 +336,8 @@ public class MainActivity extends ActionBarActivity
         private static int[] rightAnswers;
 
 
-        public static QuestionFragment newInstance(int questionN, int currentS) {
-            rightAnswers = [1,2,1,2,1,1,3,2,2,1,1,3,2,2,2,2,1,3,3,1,2,3,3,2,1,1,3,1,3,2]
+        public static QuestionFragment newInstance(int questionN, int currentS){
+            rightAnswers = [1,2,1,2,1,1,3,2,2,1,1,3,2,2,2,2,1,3,3,1,2,3,3,2,1,1,3,1,3,2];
             QuestionFragment fragment = new QuestionFragment();
             Bundle args = new Bundle();
             fragment.setArguments(args);
