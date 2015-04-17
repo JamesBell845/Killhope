@@ -354,7 +354,7 @@ public class MainActivity extends ActionBarActivity
                 Toast.makeText(rootView.getContext(),"Don't leave the quiz until it's finished",Toast.LENGTH_LONG).show();
             }
             TextView questionText = (TextView) rootView.findViewById(R.id.questionText);
-            TextView questionNumber = (TextView) rootView.findViewById(R.id.questionNumberText);
+            final TextView questionNumber = (TextView) rootView.findViewById(R.id.questionNumberText);
 
             RadioButton answer1 = (RadioButton) rootView.findViewById(R.id.answer1);
             RadioButton answer2 = (RadioButton) rootView.findViewById(R.id.answer2);
@@ -379,6 +379,9 @@ public class MainActivity extends ActionBarActivity
             TextView scoreText = (TextView) rootView.findViewById(R.id.score);
             scoreText.setText("Score: " + String.valueOf(currentScore));
             Button nextQuestionButton = (Button) rootView.findViewById(R.id.nextQuestionButton);
+            if(questionNum == 29){
+                nextQuestionButton.setText("Finish");
+            }
             nextQuestionButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -388,6 +391,12 @@ public class MainActivity extends ActionBarActivity
                              newScore = currentScore + 1;
                         }else{
                              newScore = currentScore;
+                        }
+                        if(questionNum == 29){
+                            FragmentManager fragmentManager = getFragmentManager();
+                            fragmentManager.beginTransaction()
+                                    .replace(R.id.container, EndQuizFragment.newInstance(newScore))
+                                    .commit();
                         }
                         FragmentManager fragmentManager = getFragmentManager();
                         fragmentManager.beginTransaction()
@@ -425,6 +434,37 @@ public class MainActivity extends ActionBarActivity
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_history, container, false);
+
+
+            return rootView;
+        }
+
+        @Override
+        public void onAttach(Activity activity) {
+            super.onAttach(activity);
+        }
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+        }
+    }
+    public static class EndQuizFragment extends Fragment {
+
+        private static int score;
+
+        public static EndQuizFragment newInstance(int s) {
+            EndQuizFragment fragment = new EndQuizFragment();
+            Bundle args = new Bundle();
+            fragment.setArguments(args);
+            score = s;
+            return fragment;
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.endquiz_fragment, container, false);
 
 
             return rootView;
