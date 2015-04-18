@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
-
-
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
 
     <ImageButton
         android:layout_width="fill_parent"
         android:layout_height="120dp"
-        android:scaleType="fitStart"
+        android:scaleType="fitCenter"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
         android:id="@+id/timelineButton"
@@ -21,7 +18,7 @@
     <ImageButton
         android:layout_width="fill_parent"
         android:layout_height="120dp"
-        android:scaleType="fitStart"
+        android:scaleType="fitCenter"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
         android:id="@+id/historyButton"
@@ -34,7 +31,7 @@
     <ImageButton
         android:layout_width="fill_parent"
         android:layout_height="120dp"
-        android:scaleType="fitStart"
+        android:scaleType="fitCenter"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
         android:id="@+id/glossaryButton"
@@ -46,7 +43,7 @@
     <ImageButton
         android:layout_width="fill_parent"
         android:layout_height="120dp"
-        android:scaleType="fitStart"
+        android:scaleType="fitCenter"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
         android:id="@+id/quizButton"
