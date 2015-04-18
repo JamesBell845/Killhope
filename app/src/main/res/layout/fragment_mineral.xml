@@ -22,7 +22,7 @@
                 android:layout_height="250dp"
                 android:id="@+id/mineralImage"
                 android:layout_marginTop="10dp"
-                android:scaleType="fitStart"
+                android:scaleType="fitCenter"
                 android:layout_below="@id/mineralName"
                 android:layout_centerHorizontal="true" />
 
