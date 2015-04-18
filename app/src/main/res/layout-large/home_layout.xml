@@ -5,7 +5,7 @@
 
     <ImageButton
         android:layout_width="fill_parent"
-        android:layout_height="110dp"
+        android:layout_height="wrap_content"
         android:scaleType="fitCenter"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
@@ -13,12 +13,12 @@
         android:src="@drawable/timeline_button"
         android:background="@color/background_material_light"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:layout_width="fill_parent"
-        android:layout_height="110dp"
+        android:layout_height="wrap_content"
         android:scaleType="fitCenter"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
@@ -32,7 +32,7 @@
 
     <ImageButton
         android:layout_width="fill_parent"
-        android:layout_height="110dp"
+        android:layout_height="wrap_content"
         android:scaleType="fitCenter"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
@@ -45,7 +45,7 @@
 
     <ImageButton
         android:layout_width="fill_parent"
-        android:layout_height="110dp"
+        android:layout_height="wrap_content"
         android:scaleType="fitCenter"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
