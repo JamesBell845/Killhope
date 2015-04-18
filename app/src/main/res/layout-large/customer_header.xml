@@ -8,13 +8,14 @@
     >
 
 
-<ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:id="@+id/logo"
-    android:src="@drawable/killhopelogo"
-    android:padding="8dp"
-    />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:id="@+id/logo"
+        android:src="@drawable/killhopelogo"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        />
 
 </LinearLayout>
