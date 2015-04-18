@@ -27,6 +27,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Question Text"
         android:id="@+id/questionText"
@@ -39,8 +42,11 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
         android:layout_below="@id/questionText"
         android:id="@+id/answers">
+
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

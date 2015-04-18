@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
-        android:id="@+id/score"
+        android:id="@+id/finalscore"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
