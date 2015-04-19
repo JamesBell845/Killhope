@@ -219,7 +219,7 @@ public class MainActivity extends ActionBarActivity
                 List<String> sub = new ArrayList<String>();
                 sub.add(t.getDefinition());
                 for (GlossaryTerm s : t.getSubterms()) {
-                    sub.add("Subterm: " + s.getWord() + ": " + s.getDefinition());
+                    sub.add(s.getWord() + ": " + s.getDefinition());
                 }
                 termsDefinition.put(termsList.get(i), sub);
                 i = i + 1;
