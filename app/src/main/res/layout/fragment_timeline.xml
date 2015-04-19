@@ -10,7 +10,7 @@
 
     <com.example.jamesbell.killhope.AspectRatioImageView
         android:id="@+id/image"
-        android:src="@drawable/timeline"
+        android:src="@drawable/tectonic_timeline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

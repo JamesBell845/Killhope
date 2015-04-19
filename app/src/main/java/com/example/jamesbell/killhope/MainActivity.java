@@ -102,7 +102,7 @@ public class MainActivity extends ActionBarActivity
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, HomeFragment.newInstance())
+                .replace(R.id.container, HomeFragment.newInstance()).addToBackStack("tag")
                 .commit();
 
     }
@@ -133,7 +133,7 @@ public class MainActivity extends ActionBarActivity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, MineralFragment.newInstance(position + 1))
+                .replace(R.id.container, MineralFragment.newInstance(position + 1)).addToBackStack( "tag" )
                 .commit();
     }
 
@@ -155,7 +155,7 @@ public class MainActivity extends ActionBarActivity
             public void onClick(View v) {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction()
-                        .replace(R.id.container, HomeFragment.newInstance())
+                        .replace(R.id.container, HomeFragment.newInstance()).addToBackStack( "tag" )
                         .commit();
             }
         });
@@ -188,7 +188,7 @@ public class MainActivity extends ActionBarActivity
         if (id == R.id.glossaryButton) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
-                    .replace(R.id.container, GlossaryFragment.newInstance())
+                    .replace(R.id.container, GlossaryFragment.newInstance()).addToBackStack( "tag" )
                     .commit();
         }
 
@@ -250,7 +250,7 @@ public class MainActivity extends ActionBarActivity
                 public void onClick(View v) {
                     FragmentManager fragmentManager = getFragmentManager();
                     fragmentManager.beginTransaction()
-                            .replace(R.id.container, TimelineFragment.newInstance())
+                            .replace(R.id.container, TimelineFragment.newInstance()).addToBackStack( "tag" )
                             .commit();
                 }
             });
@@ -261,7 +261,7 @@ public class MainActivity extends ActionBarActivity
                 public void onClick(View v) {
                     FragmentManager fragmentManager = getFragmentManager();
                     fragmentManager.beginTransaction()
-                            .replace(R.id.container, HistoryFragment.newInstance())
+                            .replace(R.id.container, HistoryFragment.newInstance()).addToBackStack( "tag" )
                             .commit();
                 }
             });
@@ -272,7 +272,7 @@ public class MainActivity extends ActionBarActivity
                 public void onClick(View v) {
                     FragmentManager fragmentManager = getFragmentManager();
                     fragmentManager.beginTransaction()
-                            .replace(R.id.container, GlossaryFragment.newInstance())
+                            .replace(R.id.container, GlossaryFragment.newInstance()).addToBackStack( "tag" )
                             .commit();
                 }
             });
@@ -283,7 +283,7 @@ public class MainActivity extends ActionBarActivity
                 public void onClick(View v) {
                     FragmentManager fragmentManager = getFragmentManager();
                     fragmentManager.beginTransaction()
-                            .replace(R.id.container, QuestionFragment.newInstance(0,0))
+                            .replace(R.id.container, QuestionFragment.newInstance(0,0)).addToBackStack( "tag" )
                             .commit();
                 }
             });
