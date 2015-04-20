@@ -74,28 +74,7 @@ public class MainActivity extends ActionBarActivity
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
-
-        if (mNfcAdapter == null) {
-            // Stop here, we definitely need NFC
-            Toast.makeText(this, "This device doesn't support NFC.", Toast.LENGTH_LONG).show();
-            finish();
-            return;
-
-        }
-
-        if (!mNfcAdapter.isEnabled()) {
-
-        } else {
-
-        }
-
-        handleIntent(getIntent());
-
-
-
-
-    InputStream stream = null;
+        InputStream stream = null;
         try {
             stream = getApplicationContext().getAssets().open("mineralDatabase.xml");
         } catch (IOException e) {
@@ -136,6 +115,24 @@ public class MainActivity extends ActionBarActivity
         fragmentManager.beginTransaction()
                 .replace(R.id.container, HomeFragment.newInstance()).addToBackStack("tag")
                 .commit();
+
+
+        mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
+
+        if (mNfcAdapter == null) {
+            // Stop here, we definitely need NFC
+            Toast.makeText(this, "This device doesn't support NFC.", Toast.LENGTH_LONG).show();
+            return;
+
+        }
+
+        if (!mNfcAdapter.isEnabled()) {
+
+        } else {
+
+        }
+
+        handleIntent(getIntent());
 
     }
 
