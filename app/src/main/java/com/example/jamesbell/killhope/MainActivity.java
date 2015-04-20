@@ -136,6 +136,17 @@ public class MainActivity extends ActionBarActivity
 
     }
 
+    @Override
+    public void onBackPressed(){
+        //nothing should happen if in quiz, make them press the home button to get out
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        int stackSize = fragmentManager.getBackStackEntryCount();
+        android.support.v4.app.FragmentManager.BackStackEntry latest = fragmentManager.getBackStackEntryAt(stackSize-1);
+        if (!latest.getName().equals("QuestionFrag")){
+            super.onBackPressed();
+        }
+      }
+
 
     private void handleIntent(Intent intent) {
         String action = intent.getAction();
@@ -248,6 +259,8 @@ public class MainActivity extends ActionBarActivity
         return super.onOptionsItemSelected(item);
     }
 
+
+
     public static class GlossaryFragment extends Fragment {
 
         public static GlossaryFragment newInstance() {
@@ -336,7 +349,7 @@ public class MainActivity extends ActionBarActivity
                 public void onClick(View v) {
                     FragmentManager fragmentManager = getFragmentManager();
                     fragmentManager.beginTransaction()
-                            .replace(R.id.container, QuestionFragment.newInstance(0,0)).addToBackStack( "tag" )
+                            .replace(R.id.container, QuestionFragment.newInstance(0,0),"questionFragment").addToBackStack( "QuestionFrag" )
                             .commit();
                 }
             });
@@ -400,6 +413,7 @@ public class MainActivity extends ActionBarActivity
             return fragment;
         }
 
+
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
@@ -450,12 +464,12 @@ public class MainActivity extends ActionBarActivity
                         if(questionNum == 29){
                             FragmentManager fragmentManager = getFragmentManager();
                             fragmentManager.beginTransaction()
-                                    .replace(R.id.container, EndQuizFragment.newInstance(newScore))
+                                    .replace(R.id.container, EndQuizFragment.newInstance(newScore)).addToBackStack("QuestionFrag")
                                     .commit();
                         }else{
                             FragmentManager fragmentManager = getFragmentManager();
                             fragmentManager.beginTransaction()
-                                    .replace(R.id.container, QuestionFragment.newInstance(questionNum + 1, newScore))
+                                    .replace(R.id.container, QuestionFragment.newInstance(questionNum + 1, newScore)).addToBackStack("QuestionFrag")
                                     .commit();
                         }
                     }else{
