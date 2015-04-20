@@ -651,7 +651,6 @@ public class MainActivity extends ActionBarActivity
             stage4.add("Specific Gravity: " + minerals.get(number-1).getSpecificGravity());
             stage4.add("Further Properties: " + minerals.get(number-1).getFurtherProperties());
             stage4.add("Relevance at Killhope: " + minerals.get(number-1).getRelevanceAtKillhope());
-            stage4.add("Specific Gravity: " + minerals.get(number-1).getSpecificGravity());
             stage4.add("Optical Properties: " + minerals.get(number-1).getOpticalProperties());
             stage4.add("Impurities: " + minerals.get(number-1).getImpurities());
 
